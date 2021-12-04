@@ -38,5 +38,6 @@ app.get('/',async (req,res)=>{
     res.json(pessoa)
 })
 
-
-app.listen(3001)
+require('dotenv').config()
+const porta = process.env.porta || 3001
+app.listen(porta)
